@@ -1,0 +1,54 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+Examples/Debug/*
+Examples/*/Debug/*
+Examples/*/Release/*
+Examples/*/x64/*
+
+# add
+*.vs
+*.vscode
+*.log
+
+## Visual Studio artifacts
+.vs
+ipch
+*.opensdf
+*.log
+*.pdb
+*.ilk
+*.user
+*.sdf
+*.suo
+*.VC.db
+*.VC.VC.opendb
