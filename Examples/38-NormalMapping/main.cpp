@@ -51,7 +51,6 @@ bool firstMouse = true;
 // meshes
 unsigned int planeVAO;
 
-
 int main()
 {
 
@@ -63,7 +62,6 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
 
 	// 创建GLFW窗口对象
 	GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "OpenGL", NULL, NULL);
@@ -217,7 +215,6 @@ int main()
 	screenShader.use();
 	screenShader.setInt("screenTexture", 0);
 
-	
 	// 配置MSAA 帧缓存
 	// ------------------------------------------------------------------------
 	// 如果使用的采样点非常多，启用多重采样会显著降低程序的性能。在本节写作时，通常采用的是4采样点的MSAA
@@ -372,8 +369,6 @@ int main()
 		cubeShader.setMat4("modelMatrix", model);
 		drawCube();
 		//------------------------------------------------------------------------
-
-
 
 		//------------------------------------------------------------------------
 		////2.将都采样缓冲区与中间普通FBO的颜色缓冲区进行匹配，图像存储在screenTexture中
