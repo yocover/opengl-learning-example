@@ -150,12 +150,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Image Include="bricks2.jpg" />
+    <Image Include="bricks2_disp.jpg" />
+    <Image Include="bricks2_normal.jpg" />
     <Image Include="brickwall.jpg" />
     <Image Include="brickwall_normal.jpg" />
     <Image Include="hardwood2_diffuse.jpg" />
     <Image Include="TexturesCom_MuddySand2_2x2_2K_albedo.png" />
     <Image Include="TexturesCom_MuddySand2_2x2_2K_height.png" />
     <Image Include="TexturesCom_MuddySand2_2x2_2K_normal.png" />
+    <Image Include="toy_box_disp.png" />
+    <Image Include="toy_box_normal.png" />
+    <Image Include="wood.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\lib\glad\src\glad.c" />

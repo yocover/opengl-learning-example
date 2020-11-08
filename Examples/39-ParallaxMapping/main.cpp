@@ -38,7 +38,7 @@ void drawCube();
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
-Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+Camera camera(glm::vec3(0.0f, 2.0f, 3.0f));
 
 
 float deltaTime = 0.0f; // 当前帧与上一帧之间的时间差
@@ -265,11 +265,21 @@ int main()
 		cout << "ERROR::FRAMEBUFFER:: Intermediate framebuffer is not complete!" << endl;
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	// ------------------------------------------------------------------------
-
-	unsigned int diffauseMap = loadTexture("TexturesCom_MuddySand2_2x2_2K_albedo.png");
-	unsigned int normalMap = loadTexture("TexturesCom_MuddySand2_2x2_2K_height.png");
-	unsigned int heightMap = loadTexture("TexturesCom_MuddySand2_2x2_2K_normal.png");
-
+	
+	// 砖面
+	unsigned int diffauseMap = loadTexture("bricks2.jpg");
+	unsigned int normalMap = loadTexture("bricks2_normal.jpg");
+	unsigned int heightMap = loadTexture("bricks2_disp.jpg");
+		
+	// 地面
+	//unsigned int diffauseMap = loadTexture("TexturesCom_MuddySand2_2x2_2K_albedo.png");
+	//unsigned int normalMap = loadTexture("TexturesCom_MuddySand2_2x2_2K_normal.png");
+	//unsigned int heightMap = loadTexture("TexturesCom_MuddySand2_2x2_2K_height.png");
+	
+	// 木制
+	//unsigned int diffauseMap = loadTexture("wood.png");
+	//unsigned int normalMap = loadTexture("toy_box_normal.png");
+	//unsigned int heightMap = loadTexture("toy_box_disp.png");
 	
 	//--------------直接使用法线贴图的效果
 	planeShader.use();
@@ -288,10 +298,12 @@ int main()
 
 	// lighting info
 	// -------------
-	glm::vec3 lightPos = glm::vec3(0.0f, 0.0f, 2.3f);
+	glm::vec3 lightPos = glm::vec3(0.5f, 1.0f, 0.3f);
 	// -------------
 
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+
+	float heightScale = 0.1;
 
 	//渲染循环
 	while (!glfwWindowShouldClose(window))
@@ -320,6 +332,7 @@ int main()
 
 		ImGui::Begin("view value");
 		ImGui::Text("Average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+		ImGui::SliderFloat("heightScale", &heightScale, -1.0f, 1.0f);
 		ImGui::End();
 
 		// 绘制只使用法线贴图的平面
@@ -355,13 +368,14 @@ int main()
 		glm::mat4 view = camera.GetViewMatrix();
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 model = glm::mat4(1.0f);
-		model = glm::rotate(model, (float)sin(glfwGetTime() * -0.8), glm::normalize(glm::vec3(0.0, 1.0, 0.0)));
+		model = glm::rotate(model, (float)(sin(glfwGetTime() * 0.5)), glm::normalize(glm::vec3(0.0, 1.0, 0.0)));
+		model = glm::rotate(model, (float)glm::radians(-90.0), glm::normalize(glm::vec3(1.0, 0.0, 0.0)));
 		cubeShader.setMat4("modelMatrix", model);
 		cubeShader.setMat4("viewMatrix", view);
 		cubeShader.setMat4("projectionMatrix", projection);
 		cubeShader.setVec3("iLightPos", lightPos);
 		cubeShader.setVec3("iViewPos", camera.Position);
-		cubeShader.setFloat("iHeightScale", 0.1);
+		cubeShader.setFloat("iHeightScale", heightScale);
 
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, diffauseMap);

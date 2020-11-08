@@ -39,6 +39,24 @@
     <Image Include="TexturesCom_MuddySand2_2x2_2K_normal.png">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="bricks2.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="bricks2_disp.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="bricks2_normal.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="toy_box_disp.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="toy_box_normal.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="wood.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
