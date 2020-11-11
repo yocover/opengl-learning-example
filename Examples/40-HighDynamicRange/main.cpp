@@ -177,7 +177,7 @@ int main()
 	hdrShader.setInt("hdrBuffer",0);
 
 	GLboolean hdr = true; // Change with 'Space'
-	GLfloat exposure = 1.0f; // Change with Q and E
+	GLfloat exposure = 0.01f; // Change with Q and E
 
 
 	//‰÷»æ—≠ª∑
