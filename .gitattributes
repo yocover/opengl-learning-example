@@ -1,4 +1,2 @@
-*.md linguist-language=C++
 *.cpp linguist-language=C++
-*.dat linguist-language=C++
 *.glsl linguist-language=GLSL
