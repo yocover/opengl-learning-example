@@ -1,1 +1,2 @@
-*.md linguist-language=C++
+*.md linguist-language=C/C++
+*.cpp linguist-language=C/C++
