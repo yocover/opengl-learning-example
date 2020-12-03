@@ -69,15 +69,13 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-    <IncludePath>F:\Remote\opengl-learning-example\libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>F:\Remote\opengl-learning-example\libraries\lib;$(LibraryPath)</LibraryPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">	
+	<LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>F:\Remote\opengl-learning-example\libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>F:\Remote\opengl-learning-example\libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

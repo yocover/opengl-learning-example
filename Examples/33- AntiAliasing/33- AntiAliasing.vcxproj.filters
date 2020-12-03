@@ -59,7 +59,7 @@
     <ClCompile Include="imgui\imgui_widgets.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
-    <ClCompile Include="..\lib\glad\src\glad.c">
+    <ClCompile Include="..\..\libraries\glad\src\glad.c">
       <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>

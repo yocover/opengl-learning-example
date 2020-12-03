@@ -1,5 +1,5 @@
-#include <GL/glad.h>
-#include <GL/glfw3.h>
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 
 #include <iostream>
 
@@ -261,10 +261,10 @@ int main()
 		glBindVertexArray(VAO1);
 		glDrawArrays(GL_TRIANGLES, 0, (sizeof(vertices1) / sizeof(vertices1[0])) / 3);
 
-		glUseProgram(shaderProgram2);
-		glBindVertexArray(VAO2);
-		glDrawArrays(GL_TRIANGLES, 0, (sizeof(vertices2) / sizeof(vertices2[0])) / 3);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		//glUseProgram(shaderProgram2);
+		//glBindVertexArray(VAO2);
+		//glDrawArrays(GL_TRIANGLES, 0, (sizeof(vertices2) / sizeof(vertices2[0])) / 3);
+		//glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
 
 		// 参数1 图元类型
 		// 参数2 顶点数组的起始索引

@@ -1,8 +1,8 @@
-#include <GL/glad.h>
-#include <GL/glfw3.h>
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 #include <iostream>
 
-#include <Shader.h>
+#include <common/Shader.h>
 
 using namespace std;
 

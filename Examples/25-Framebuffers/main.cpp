@@ -3,15 +3,15 @@
 #include "imgui/imgui_impl_opengl3.h"
 #include <stdio.h>
 
-#include <GL/glad.h>
-#include <GL/glfw3.h>
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 #include <iostream>
 #include <map>
 
-#include <Shader.h>
-#include <camera.h>
+#include <common/Shader.h>
+#include <common/camera.h>
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include <common/stb_image.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -89,9 +89,9 @@ int main()
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	// 面剔除
-	glEnable(GL_CULL_FACE);
-	glCullFace(GL_BACK); // 剔除背向的面
-	glFrontFace(GL_CCW);//将顺时针的面定义为正向的面
+	//glEnable(GL_CULL_FACE);
+	//glCullFace(GL_BACK); // 剔除背向的面
+	//glFrontFace(GL_CCW);//将顺时针的面定义为正向的面
 
 						// 绘制物体的着色器
 	Shader shader("blending_vs.glsl", "blending_fs.glsl");
@@ -343,7 +343,7 @@ int main()
 		shader.setMat4("model", model);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		glDisable(GL_CULL_FACE);
+		//glDisable(GL_CULL_FACE);
 		// 地板
 		glBindVertexArray(planeVAO);
 		glBindTexture(GL_TEXTURE_2D, floorTexture);

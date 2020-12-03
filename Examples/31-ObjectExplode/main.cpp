@@ -3,17 +3,18 @@
 #include "imgui/imgui_impl_opengl3.h"
 #include <stdio.h>
 
-#include <GL/glad.h>
-#include <GL/glfw3.h>
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 #include <iostream>
+#include <map>
 
-#include <Shader.h>
-#include <camera.h>
+#include <common/Shader.h>
+#include <common/camera.h>
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include <common/stb_image.h>
 
-#include <mesh.h>
-#include <model.h>
+#include <common/mesh.h>
+#include <common/model.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
