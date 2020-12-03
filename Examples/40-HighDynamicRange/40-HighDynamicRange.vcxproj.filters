@@ -17,7 +17,7 @@
       <UniqueIdentifier>{36b18a9f-3140-4ae9-9225-21021e4309b4}</UniqueIdentifier>
     </Filter>
     <Filter Include="imgui">
-      <UniqueIdentifier>{e7b28ca5-b6b3-4339-8445-9d223d066866}</UniqueIdentifier>
+      <UniqueIdentifier>{34506a63-3b6f-45e1-a7fa-695e16ed2cfb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -38,7 +38,7 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\lib\glad\src\glad.c">
+    <ClCompile Include="..\..\libraries\glad\src\glad.c">
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui.cpp">
@@ -59,6 +59,26 @@
     <ClCompile Include="imgui\imgui_widgets.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\tangent_height_mapping_frag.glsl">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\tangent_height_mapping_vert.glsl">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\light_vert.glsl">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\light_frag.glsl">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\hdr_vert.glsl">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\hdr_frag.glsl">
+      <Filter>shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="imgui\imconfig.h">
@@ -85,25 +105,5 @@
     <ClInclude Include="imgui\imstb_truetype.h">
       <Filter>imgui</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="shader\tangent_height_mapping_frag.glsl">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="shader\tangent_height_mapping_vert.glsl">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="shader\light_vert.glsl">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="shader\light_frag.glsl">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="shader\hdr_vert.glsl">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="shader\hdr_frag.glsl">
-      <Filter>shader</Filter>
-    </None>
   </ItemGroup>
 </Project>
