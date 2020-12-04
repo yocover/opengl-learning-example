@@ -225,7 +225,7 @@ int main()
 	ourShader.setInt("material.specular", 1);
 	//ourShader.setFloat("time", (float)glfwGetTime());
 
-	Model ourModel("../assert/model/nanosuit/nanosuit.obj");
+	Model ourModel("../../assert/model/nanosuit/nanosuit.obj");
 
 	//‰÷»æ—≠ª∑
 	while (!glfwWindowShouldClose(window))

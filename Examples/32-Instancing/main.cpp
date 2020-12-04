@@ -295,8 +295,8 @@ int main()
 		modelMtrices[i] = model;
 	}
 
-	Model planetModel("../assert/model/planet/planet.obj");
-	Model rockModel("../assert/model/rock/rock.obj");
+	Model planetModel("../../assert/model/planet/planet.obj");
+	Model rockModel("../../assert/model/rock/rock.obj");
 
 	// ∂•µ„ª∫≥Â∂‘œÛ
 	unsigned int buffer;

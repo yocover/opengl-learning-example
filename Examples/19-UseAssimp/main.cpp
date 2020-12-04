@@ -84,11 +84,11 @@ int main()
 
 	// build and compile shaders
 	// -------------------------
-	Shader ourShader("1.model_loading.vs", "1.model_loading.fs");
+	Shader ourShader("load_model_vert.glsl", "load_model_frag.glsl");
 
 	// load models
 	// -----------
-	Model ourModel("../assert/model/nanosuit/nanosuit.obj");
+	Model ourModel("../../assert/model/nanosuit/nanosuit.obj");
 
 
 	// draw in wireframe

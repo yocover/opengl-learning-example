@@ -10,10 +10,10 @@
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
 
-#include "mesh.h"
-#include <Shader.h>
+#include <common/mesh.h>
+#include <common/Shader.h>
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include <common/stb_image.h>
 
 #include <string>
 #include <fstream>

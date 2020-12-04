@@ -222,7 +222,7 @@ int main()
 	ourShader.setInt("material.diffuse", 0);
 	ourShader.setInt("material.specular", 1);
 
-	Model ourModel("../assert/model/nanosuit/nanosuit.obj");
+	Model ourModel("../../assert/model/nanosuit/nanosuit.obj");
 
 	//‰÷»æ—≠ª∑
 	while (!glfwWindowShouldClose(window))
