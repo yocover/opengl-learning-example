@@ -14,37 +14,37 @@
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/01-TestGLFW.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/02-IndexArrayBuffer.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/03-BasePractice.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/04-ShaderLanguage.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/05-ShaderPractice.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/05-ShaderPractice.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
         </div>
@@ -52,37 +52,37 @@
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/06-UseStbImage.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/07-Transformation.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/08-CoordinateSystem.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/08-CoordinateSystem.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/08-CoordinateSystem.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
              <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/08-CoordinateSystem.png"
-                    width="14%"
+                    width="12%"
                     alt=""
             /></a>
         </div>
