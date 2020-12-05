@@ -260,7 +260,7 @@ int main()
 
 
 		// 设置清除颜色 -- 状态设置
-		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 		//开始清空屏幕并且使用上面的颜色 -- 状态使用
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

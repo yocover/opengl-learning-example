@@ -167,7 +167,7 @@ int main()
 		// 渲染指令
 
 		// 设置清除颜色 -- 状态设置
-		glClearColor(0.2f, 0.3f, 0.4f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 		//开始清空屏幕并且使用上面的颜色 -- 状态使用
 		glClear(GL_COLOR_BUFFER_BIT);

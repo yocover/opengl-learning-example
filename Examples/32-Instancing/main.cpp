@@ -349,7 +349,7 @@ int main()
 		glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 
 		// 检测是否需要退出窗口
-		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glEnable(GL_DEPTH_TEST);
 
@@ -410,7 +410,7 @@ int main()
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		glDisable(GL_DEPTH_TEST);
 
-		glClearColor(1.0, 1.0, 1.0, 1.0);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		screenShader.use();

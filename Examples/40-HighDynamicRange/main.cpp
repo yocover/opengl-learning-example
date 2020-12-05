@@ -189,8 +189,7 @@ int main()
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-		
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 		ImGui::Begin("view value");
 		ImGui::Text("Average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
