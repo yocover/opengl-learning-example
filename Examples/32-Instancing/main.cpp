@@ -1,17 +1,13 @@
-#include "imgui/imgui.h"
-#include "imgui/imgui_impl_glfw.h"
-#include "imgui/imgui_impl_opengl3.h"
-#include <stdio.h>
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <map>
 
-#include <common/Shader.h>
+#include <common/shader.h>
 #include <common/camera.h>
 #define STB_IMAGE_IMPLEMENTATION
 #include <common/stb_image.h>
+#include <common/gui.h>
 
 #include <common/mesh.h>
 #include <common/model.h>
@@ -252,12 +248,12 @@ int main()
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
 	vector<string>faces{
-		"./skybox/right.jpg",
-		"./skybox/left.jpg",
-		"./skybox/top.jpg",
-		"./skybox/bottom.jpg",
-		"./skybox/front.jpg",
-		"./skybox/back.jpg"
+		"../../assert/texture/skybox/right.jpg",
+		"../../assert/texture/skybox/left.jpg",
+		"../../assert/texture/skybox/top.jpg",
+		"../../assert/texture/skybox/bottom.jpg",
+		"../../assert/texture/skybox/front.jpg",
+		"../../assert/texture/skybox/back.jpg"
 	};
 
 	unsigned int cubemapTexture = loadCubemap(faces);

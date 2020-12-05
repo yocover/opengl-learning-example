@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-#include <common/Shader.h>
+#include <common/shader.h>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <common/stb_image.h>
@@ -167,7 +167,7 @@ int main()
 	// Í¼ÏñYÖá·­×ª
 	stbi_set_flip_vertically_on_load(true);
 	//unsigned char *data = stbi_load("C:/Users/ithan/Desktop/container.jpg", &width, &height, &nChannels, 0);
-	unsigned char *data = stbi_load("container.jpg", &width, &height, &nChannels, 0);
+	unsigned char *data = stbi_load("../../assert/texture/container.jpg", &width, &height, &nChannels, 0);
 	if (data)
 	{
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
@@ -190,7 +190,7 @@ int main()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 	//unsigned char *data = stbi_load("C:/Users/ithan/Desktop/container.jpg", &width, &height, &nChannels, 0);
-	data = stbi_load("awesomeface.png", &width, &height, &nChannels, 0);
+	data = stbi_load("../../assert/texture/awesomeface.png", &width, &height, &nChannels, 0);
 	if (data)
 	{
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);

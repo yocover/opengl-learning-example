@@ -1,21 +1,16 @@
-
-#include "imgui/imgui.h"
-#include "imgui/imgui_impl_glfw.h"
-#include "imgui/imgui_impl_opengl3.h"
-#include <stdio.h>
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <map>
 
-#include <common/Shader.h>
+#include <common/shader.h>
 #include <common/camera.h>
 #define STB_IMAGE_IMPLEMENTATION
 #include <common/stb_image.h>
+#include <common/gui.h>
 
-//#include <common/mesh.h>
-//#include <common/model.h>
+#include <common/mesh.h>
+#include <common/model.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -108,9 +103,9 @@ int main()
 	ImGui_ImplOpenGL3_Init(glsl_version);
 	
 	// 砖面
-	unsigned int diffauseMap = loadTexture("bricks2.jpg");
-	unsigned int normalMap = loadTexture("bricks2_normal.jpg");
-	unsigned int heightMap = loadTexture("bricks2_disp.jpg");
+	unsigned int diffauseMap = loadTexture("../../assert/texture/bricks2.jpg");
+	unsigned int normalMap = loadTexture("../../assert/texture/bricks2_normal.jpg");
+	unsigned int heightMap = loadTexture("../../assert/texture/bricks2_disp.jpg");
 		
 
 	//--------------转换到切线空间的效果
@@ -141,7 +136,7 @@ int main()
 	lightColors.push_back(glm::vec3(0.0f, 0.1f, 0.0f));
 
 	// texture
-	unsigned int woodTexture = loadTexture("wood.png");
+	unsigned int woodTexture = loadTexture("../../assert/texture/wood.png");
 
 	// 设置浮点缓冲区
 	unsigned int hdrFBO;

@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-#include <common/Shader.h>
+#include <common/shader.h>
 
 using namespace std;
 

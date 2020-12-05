@@ -1,20 +1,17 @@
-#include "imgui/imgui.h"
-#include "imgui/imgui_impl_glfw.h"
-#include "imgui/imgui_impl_opengl3.h"
-#include <stdio.h>
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <map>
 
-#include <common/Shader.h>
+#include <common/shader.h>
 #include <common/camera.h>
 #define STB_IMAGE_IMPLEMENTATION
 #include <common/stb_image.h>
-//
-//#include <common/mesh.h>
-//#include <common/model.h>
+#include <common/gui.h>
+
+
+#include <common/mesh.h>
+#include <common/model.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -255,7 +252,7 @@ int main()
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	// ------------------------------------------------------------------------
 
-	unsigned int planeTexture = loadTexture("hardwood2_diffuse.jpg");
+	unsigned int planeTexture = loadTexture("../../assert/texture/hardwood2_diffuse.jpg");
 	planeShader.use();
 	planeShader.setInt("floorTexture", 0);
 

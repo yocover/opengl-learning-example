@@ -15,14 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="awesomeface.png">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="container.jpg">
-      <Filter>资源文件</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="fs.glsl">
       <Filter>资源文件</Filter>
     </None>
@@ -39,9 +31,6 @@
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\libraries\glad\src\glad.c">
-      <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

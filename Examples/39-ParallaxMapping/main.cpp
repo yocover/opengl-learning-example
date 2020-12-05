@@ -1,17 +1,14 @@
-#include "imgui/imgui.h"
-#include "imgui/imgui_impl_glfw.h"
-#include "imgui/imgui_impl_opengl3.h"
-#include <stdio.h>
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <map>
 
-#include <common/Shader.h>
+#include <common/shader.h>
 #include <common/camera.h>
 #define STB_IMAGE_IMPLEMENTATION
 #include <common/stb_image.h>
+#include <common/gui.h>
+
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -35,7 +32,7 @@ void drawCube();
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
-Camera camera(glm::vec3(0.0f, 2.0f, 3.0f));
+Camera camera(glm::vec3(0.0f, 1.0f, 3.0f));
 
 
 float deltaTime = 0.0f; // 当前帧与上一帧之间的时间差
@@ -264,19 +261,19 @@ int main()
 	// ------------------------------------------------------------------------
 	
 	// 砖面
-	unsigned int diffauseMap = loadTexture("bricks2.jpg");
-	unsigned int normalMap = loadTexture("bricks2_normal.jpg");
-	unsigned int heightMap = loadTexture("bricks2_disp.jpg");
+	unsigned int diffauseMap = loadTexture("../../assert/texture/bricks2.jpg");
+	unsigned int normalMap = loadTexture("../../assert/texture/bricks2_normal.jpg");
+	unsigned int heightMap = loadTexture("../../assert/texture/bricks2_disp.jpg");
 		
 	// 地面
-	//unsigned int diffauseMap = loadTexture("TexturesCom_MuddySand2_2x2_2K_albedo.png");
-	//unsigned int normalMap = loadTexture("TexturesCom_MuddySand2_2x2_2K_normal.png");
-	//unsigned int heightMap = loadTexture("TexturesCom_MuddySand2_2x2_2K_height.png");
+	//unsigned int diffauseMap = loadTexture("../../assert/texture/TexturesCom_MuddySand2_2x2_2K_albedo.png");
+	//unsigned int normalMap = loadTexture("../../assert/texture/TexturesCom_MuddySand2_2x2_2K_normal.png");
+	//unsigned int heightMap = loadTexture("../../assert/texture/TexturesCom_MuddySand2_2x2_2K_height.png");
 	
 	// 木制
-	//unsigned int diffauseMap = loadTexture("wood.png");
-	//unsigned int normalMap = loadTexture("toy_box_normal.png");
-	//unsigned int heightMap = loadTexture("toy_box_disp.png");
+	//unsigned int diffauseMap = loadTexture("../../assert/texture/wood.png");
+	//unsigned int normalMap = loadTexture("../../assert/texture/toy_box_normal.png");
+	//unsigned int heightMap = loadTexture("../../assert/texture/toy_box_disp.png");
 	
 	//--------------直接使用法线贴图的效果
 	planeShader.use();

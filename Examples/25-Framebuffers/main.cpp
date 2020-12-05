@@ -1,17 +1,13 @@
-#include "imgui/imgui.h"
-#include "imgui/imgui_impl_glfw.h"
-#include "imgui/imgui_impl_opengl3.h"
-#include <stdio.h>
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <map>
 
-#include <common/Shader.h>
+#include <common/shader.h>
 #include <common/camera.h>
 #define STB_IMAGE_IMPLEMENTATION
 #include <common/stb_image.h>
+#include <common/gui.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -95,7 +91,7 @@ int main()
 
 						// 绘制物体的着色器
 	Shader shader("blending_vs.glsl", "blending_fs.glsl");
-	Shader screenShader("framebuffer.vs", "framebuffer.fs");
+	Shader screenShader("framebuffer_vert.glsl", "framebuffer_frag.glsl");
 
 	// 顶点数组
 	float cubeVertices[] = {
@@ -229,9 +225,9 @@ int main()
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
 
 	// 加载纹理
-	unsigned int cubeTexture = loadTexture("container.jpg");
-	unsigned int floorTexture = loadTexture("metal.png");
-	unsigned int grassTexture = loadTexture("blending_transparent_window.png");
+	unsigned int cubeTexture = loadTexture("../../assert/texture/container.jpg");
+	unsigned int floorTexture = loadTexture("../../assert/texture/metal.png");
+	unsigned int grassTexture = loadTexture("../../assert/texture/blending_transparent_window.png");
 
 
 	// 创建imgui上下文
@@ -257,42 +253,42 @@ int main()
 	};
 
 
-	// 创建一个帧缓冲对象并绑定它
-	unsigned int framebuffer;
-	glGenFramebuffers(1, &framebuffer);
-	glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+	//// 创建一个帧缓冲对象并绑定它
+	//unsigned int framebuffer;
+	//glGenFramebuffers(1, &framebuffer);
+	//glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 
-	// 创建一个颜色附件并将它附加到帧缓冲上
-	// 生成纹理
-	unsigned int texColorBuffer;
-	glGenTextures(1, &texColorBuffer);
-	glBindTexture(GL_TEXTURE_2D, texColorBuffer);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 800, 600, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glBindTexture(GL_TEXTURE_2D, 0);
+	//// 创建一个颜色附件并将它附加到帧缓冲上
+	//// 生成纹理
+	//unsigned int texColorBuffer;
+	//glGenTextures(1, &texColorBuffer);
+	//glBindTexture(GL_TEXTURE_2D, texColorBuffer);
+	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 800, 600, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	//glBindTexture(GL_TEXTURE_2D, 0);
 
-	// 将颜色附加附加到当前绑定的帧缓冲上
-	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texColorBuffer, 0);
+	//// 将颜色附加附加到当前绑定的帧缓冲上
+	//glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texColorBuffer, 0);
 
-	// 创建渲染缓冲对象
-	unsigned int rbo;
-	glGenRenderbuffers(1, &rbo);
-	glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-	glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, 800, 600);
-	glBindRenderbuffer(GL_RENDERBUFFER, 0);
+	//// 创建渲染缓冲对象
+	//unsigned int rbo;
+	//glGenRenderbuffers(1, &rbo);
+	//glBindRenderbuffer(GL_RENDERBUFFER, rbo);
+	//glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, 800, 600);
+	//glBindRenderbuffer(GL_RENDERBUFFER, 0);
 
-	// 将渲染缓冲对象附加到帧缓冲的深度和模板附件上
-	glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
+	//// 将渲染缓冲对象附加到帧缓冲的深度和模板附件上
+	//glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
 
-	// 检查帧缓冲是否完整
-	if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-	{
-		cout << "ERROR:: FRAMEBUFFER :: framebuffer is not complete！ " << std::endl;
-	}
+	//// 检查帧缓冲是否完整
+	//if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+	//{
+	//	cout << "ERROR:: FRAMEBUFFER :: framebuffer is not complete！ " << std::endl;
+	//}
 
 
-	glBindFramebuffer(GL_FRAMEBUFFER, 0);
+	//glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
 
 	//渲染循环
@@ -316,8 +312,8 @@ int main()
 			sorted[distance] = windows[i];
 		}
 
-		// 绑定帧缓冲
-		glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+		//// 绑定帧缓冲
+		//glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 
 		// 检测是否需要退出窗口
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -368,20 +364,20 @@ int main()
 		ImGui::Text("Average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 		ImGui::End();
 
-		glBindFramebuffer(GL_FRAMEBUFFER, 0);
-		glDisable(GL_DEPTH_TEST);
+		//glBindFramebuffer(GL_FRAMEBUFFER, 0);
+		//glDisable(GL_DEPTH_TEST);
 
-		glClearColor(1.0, 1.0, 1.0, 1.0);
-		glClear(GL_COLOR_BUFFER_BIT);
+		//glClearColor(1.0, 1.0, 1.0, 1.0);
+		//glClear(GL_COLOR_BUFFER_BIT);
 
 
-		screenShader.use();
-			
-		screenShader.setFloat("offset", 1/300.0);
+		//screenShader.use();
+		//	
+		//screenShader.setFloat("offset", 1/300.0);
 
-		glBindVertexArray(quadVAO);
-		glBindTexture(GL_TEXTURE_2D, texColorBuffer);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+		//glBindVertexArray(quadVAO);
+		//glBindTexture(GL_TEXTURE_2D, texColorBuffer);
+		//glDrawArrays(GL_TRIANGLES, 0, 6);
 
 
 		// Rendering

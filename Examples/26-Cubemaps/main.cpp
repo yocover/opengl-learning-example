@@ -1,17 +1,13 @@
-#include "imgui/imgui.h"
-#include "imgui/imgui_impl_glfw.h"
-#include "imgui/imgui_impl_opengl3.h"
-#include <stdio.h>
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <map>
 
-#include <common/Shader.h>
+#include <common/shader.h>
 #include <common/camera.h>
 #define STB_IMAGE_IMPLEMENTATION
 #include <common/stb_image.h>
+#include <common/gui.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -345,9 +341,9 @@ int main()
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 
 	// 加载纹理
-	unsigned int cubeTexture = loadTexture("container.jpg");
-	unsigned int floorTexture = loadTexture("metal.png");
-	unsigned int grassTexture = loadTexture("blending_transparent_window.png");
+	unsigned int cubeTexture = loadTexture("../../assert/texture/container.jpg");
+	unsigned int floorTexture = loadTexture("../../assert/texture/metal.png");
+	unsigned int grassTexture = loadTexture("../../assert/texture/blending_transparent_window.png");
 
 
 	// 创建imgui上下文
@@ -418,12 +414,12 @@ int main()
 
 
 	vector<string>faces{
-		"./skybox/right.jpg",
-		"./skybox/left.jpg",
-		"./skybox/top.jpg",
-		"./skybox/bottom.jpg",
-		"./skybox/front.jpg",
-		"./skybox/back.jpg"
+		"../../assert/texture/skybox/right.jpg",
+		"../../assert/texture/skybox/left.jpg",
+		"../../assert/texture/skybox/top.jpg",
+		"../../assert/texture/skybox/bottom.jpg",
+		"../../assert/texture/skybox/front.jpg",
+		"../../assert/texture/skybox/back.jpg"
 	};
 
 	unsigned int cubemapTexture = loadCubemap(faces);
