@@ -3,10 +3,8 @@
 >
     <h2 align="center">LearnOpenGLProjects</h2>
     <a href="https://learnopengl-cn.github.io/">https://learnopengl-cn.github.io/</a>  相关学习示例
-    <br>
     <h2 align="center">Example screenshot</h2>
-    <hr style="border: 0.01px dashed #cccccc" />
-    <div>
+    <div align="center">
         <div style="margin: 20px">
             <a style="margin: 10px" href="#"
                 ><img
