@@ -7,7 +7,7 @@
             <a href="https://learnopengl-cn.github.io/"
                 >learnopengl-cn</a
             >
-            相关学习示例
+            相关学习示例 -->IDE:vs2015 -->config:Debug win32
         </span>
     </h4>
     <h2 align="center">Example screenshot</h2>
@@ -178,6 +178,221 @@
                     src="./assert/images/18-Multiplelights.png"
                     width="12%"
                     alt="18-Multiplelights"
+            /></a>
+        </div>
+        <div style="margin: 20px">
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/19-UseAssimp"
+                title="19-UseAssimp"
+                ><img
+                    src="./assert/images/19-UseAssimp.png"
+                    width="12%"
+                    alt="19-UseAssimp"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/20-LoadModel"
+                title="20-LoadModel"
+                ><img
+                    src="./assert/images/20-LoadModel.png"
+                    width="12%"
+                    alt="20-LoadModel"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/21-DephTest"
+                title="21-DephTest"
+                ><img
+                    src="./assert/images/21-DephTest.png"
+                    width="12%"
+                    alt="21-DephTest"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/22-StencilTest"
+                title="22-StencilTest"
+                ><img
+                    src="./assert/images/22-StencilTest.png"
+                    width="12%"
+                    alt="22-StencilTest"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/23-Blending"
+                title="23-Blending"
+                ><img
+                    src="./assert/images/23-Blending.png"
+                    width="12%"
+                    alt="23-Blending"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/24-FaceCulling"
+                title="24-FaceCulling"
+                ><img
+                    src="./assert/images/24-FaceCulling.png"
+                    width="12%"
+                    alt="24-FaceCulling"
+            /></a>
+        </div>
+        <div style="margin: 20px">
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/25-Framebuffers"
+                title="25-Framebuffers"
+                ><img
+                    src="./assert/images/25-Framebuffers.png"
+                    width="12%"
+                    alt="25-Framebuffers"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/26-Cubemaps"
+                title="26-Cubemaps"
+                ><img
+                    src="./assert/images/26-Cubemaps.png"
+                    width="12%"
+                    alt="26-Cubemaps"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/27-BufferSubData"
+                title="27-BufferSubData"
+                ><img
+                    src="./assert/images/27-BufferSubData.png"
+                    width="12%"
+                    alt="27-BufferSubData"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/28-BuiltInVariable"
+                title="28-BuiltInVariable"
+                ><img
+                    src="./assert/images/28-BuiltInVariable.png"
+                    width="12%"
+                    alt="28-BuiltInVariable"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/29-UniformBuffer"
+                title="29-UniformBuffer"
+                ><img
+                    src="./assert/images/29-UniformBuffer.png"
+                    width="12%"
+                    alt="29-UniformBuffer"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/30-GeometryShader"
+                title="30-GeometryShader"
+                ><img
+                    src="./assert/images/30-GeometryShader.png"
+                    width="12%"
+                    alt="30-GeometryShader"
+            /></a>
+        </div>
+        <div style="margin: 20px">
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/31-ObjectExplode"
+                title="31-ObjectExplode"
+                ><img
+                    src="./assert/images/31-ObjectExplode.png"
+                    width="12%"
+                    alt="31-ObjectExplode"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/32-Instancing"
+                title="32-Instancing"
+                ><img
+                    src="./assert/images/32-Instancing.png"
+                    width="12%"
+                    alt="32-Instancing"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/33-AntiAliasing"
+                title="33-AntiAliasing"
+                ><img
+                    src="./assert/images/33-AntiAliasing.png"
+                    width="12%"
+                    alt="33-AntiAliasing"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/34-BlinnPhong"
+                title="34-BlinnPhong"
+                ><img
+                    src="./assert/images/34-BlinnPhong.png"
+                    width="12%"
+                    alt="34-BlinnPhong"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/35-GammaCorrection"
+                title="35-GammaCorrection"
+                ><img
+                    src="./assert/images/35-GammaCorrection.png"
+                    width="12%"
+                    alt="35-GammaCorrection"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/36-ShadowMapping"
+                title="36-ShadowMapping"
+                ><img
+                    src="./assert/images/36-ShadowMapping.png"
+                    width="12%"
+                    alt="36-ShadowMapping"
+            /></a>
+        </div>
+        <div style="margin: 20px">
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/37-PointShadows"
+                title="37-PointShadows"
+                ><img
+                    src="./assert/images/37-PointShadows.png"
+                    width="12%"
+                    alt="37-PointShadows"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/38-NormalMapping"
+                title="38-NormalMapping"
+                ><img
+                    src="./assert/images/38-NormalMapping.png"
+                    width="12%"
+                    alt="38-NormalMapping"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/39-ParallaxMapping"
+                title="39-ParallaxMapping"
+                ><img
+                    src="./assert/images/39-ParallaxMapping.png"
+                    width="12%"
+                    alt="39-ParallaxMapping"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/40-HighDynamicRange"
+                title="40-HighDynamicRange"
+                ><img
+                    src="./assert/images/40-HighDynamicRange.png"
+                    width="12%"
+                    alt="40-HighDynamicRange"
+            /></a>
+            <a
+                style="margin: 10px"
+                href="https://github.com/yocover/opengl-learning-example/tree/main/Examples/41-Bloom"
+                title="41-Bloom"
+                ><img
+                    src="./assert/images/41-Bloom.png"
+                    width="12%"
+                    alt="41-Bloom"
             /></a>
         </div>
     </div>
