@@ -41,6 +41,12 @@
                     width="10%"
                     alt=""
             /></a>
+            <a style="margin: 10px" href="#"
+                ><img
+                    src="./assert/images/05-ShaderPractice.png"
+                    width="10%"
+                    alt=""
+            /></a>
         </div>
         <div style="margin: 20px">
             <a style="margin: 10px" href="#"
@@ -68,6 +74,12 @@
                     alt=""
             /></a>
             <a style="margin: 10px" href="#"
+                ><img
+                    src="./assert/images/08-CoordinateSystem.png"
+                    width="10%"
+                    alt=""
+            /></a>
+             <a style="margin: 10px" href="#"
                 ><img
                     src="./assert/images/08-CoordinateSystem.png"
                     width="10%"
